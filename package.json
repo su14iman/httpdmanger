@@ -1,0 +1,34 @@
+{
+  "name": "httpdmanger",
+  "version": "1.0.0",
+  "description": "VHost manger for httpd server macOS",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "dev": "./node_modules/.bin/ts-node-dev bin/index.ts",
+    "dev2": "./node_modules/.bin/ts-node-dev bin/index.ts g blank bb 55   ",
+    "inspect": "node --inspect ."
+  },
+  "keywords": [],
+  "author": " Sulaiman Sulaiman <s.su14iman@gmail.com> ",
+  "license": "ISC",
+  "bin": {
+    "hm": "./dist/index.js"
+  },
+  "dependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/node": "^17.0.10",
+    "commander": "^8.3.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.5"
+  }
+}
+
